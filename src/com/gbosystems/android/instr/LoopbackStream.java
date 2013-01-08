@@ -3,12 +3,10 @@ package com.gbosystems.android.instr;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-
 /**
- * 
  * Stream class containing a byte buffer that can be written to and read from.
+ * 
  * @author Geoff O'Donnell
- *
  */
 public class LoopbackStream {
 

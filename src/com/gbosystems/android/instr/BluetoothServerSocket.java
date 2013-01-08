@@ -10,12 +10,12 @@ import java.io.IOException;
  */
 public class BluetoothServerSocket {
 	
-    /* Member constants */
+    /* Declare class constants */
     public static final int MODE_SIMULATE = 0;
     public static final int MODE_LOOPBACK = 1;
     public static final int MODE_FILE = 2;
 	
-    /* Member variables */
+    /* Declare class members */
     public BluetoothDevice mDevice;
     private boolean mThrowIOException;
     private int mSocketMode;

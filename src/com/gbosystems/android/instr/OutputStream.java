@@ -8,11 +8,11 @@ import java.io.IOException;
 
 /**
  * 
- * Instrumented version of java.io.OutputStream, allows for simulated writes, writes to a file,
- *  and accepts a LoopbackStream object used to create a loopback with a
- * 	com.gbosystems.android.instrumented.InputStream object.
+ * Instrumented version of java.io.OutputStream, allows for simulated writes,
+ * writes to a file, and accepts a LoopbackStream object used to create a
+ * loopback with a com.gbosystems.android.instrumented.InputStream object.
+ * 
  * @author Geoff O'Donnell
- *
  */
 public class OutputStream {
 
@@ -20,20 +20,20 @@ public class OutputStream {
     private static final String TAG = "OutputStream";
     private static final boolean D = false;
     
-    /* Member constants */
+    /* Declare class constants */
     public static final int MODE_SIMULATE_DELAY = 0;
     public static final int MODE_LOOPBACK = 1;
     public static final int MODE_FILE = 2;
 	
-    /* Member variables */
+    /* Declare class members */
     private boolean mThrowIOException;
-	private boolean mThrowIndexOutOfBoundsException;
-	private boolean mWriteToFileSystem;
-	private boolean mWriteToLoopback;
-	private int mWriteDelay;
-	private String mFilePath;
-	private String mFileName;
-	private LoopbackStream mLoopbackStream;
+    private boolean mThrowIndexOutOfBoundsException;
+    private boolean mWriteToFileSystem;
+    private boolean mWriteToLoopback;
+    private int mWriteDelay;
+    private String mFilePath;
+    private String mFileName;
+    private LoopbackStream mLoopbackStream;
 	
     public OutputStream(String id, LoopbackStream stream, int mode){
 		
@@ -48,17 +48,17 @@ public class OutputStream {
 
         switch (mode){
         case MODE_SIMULATE_DELAY:
-                mWriteToFileSystem = false;
-                mWriteToLoopback = false;
-                break;
+            mWriteToFileSystem = false;
+            mWriteToLoopback = false;
+            break;
         case MODE_LOOPBACK:
-                mWriteToFileSystem = false;
-                mWriteToLoopback = true;
-                break;
+            mWriteToFileSystem = false;
+            mWriteToLoopback = true;
+            break;
         case MODE_FILE:
-                mWriteToFileSystem = true;
-                mWriteToLoopback = false;
-                break;
+            mWriteToFileSystem = true;
+            mWriteToLoopback = false;
+            break;
         }
 		
         /* Ensure the file write directory exists */
@@ -74,8 +74,8 @@ public class OutputStream {
             if (D) { System.out.println(TAG + ": Write Directory DOES NOT Exist"); }
         }
 
-            return;
-	}
+        return;
+    }
 	
     public OutputStream(String id, int mode){
         this(id, null, mode);

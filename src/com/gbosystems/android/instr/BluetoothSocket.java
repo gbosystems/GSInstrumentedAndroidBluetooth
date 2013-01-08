@@ -15,12 +15,12 @@ public class BluetoothSocket {
     private static final String TAG = "BluetoothSocket";
     private static final boolean D = false;
 	
-    /* Member constants */
+    /* Declare class constants */
     public static final int MODE_SIMULATE = 0;
     public static final int MODE_LOOPBACK = 1;
     public static final int MODE_FILE = 2;
 	
-    /* Member variables */
+    /* Declare class members */
     private BluetoothDevice mDevice;
     private boolean mConnected;
     private boolean mThrowIOException;

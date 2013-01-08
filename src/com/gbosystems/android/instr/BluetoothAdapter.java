@@ -50,7 +50,7 @@ public class BluetoothAdapter {
     public static final int MODE_FILE = 2;     // Send OutputStream writes on a file on the External Storage directory, read from file
     										   // in same directory.
     
-    /* Member variables */
+    /* Declare class members */
     private int mState;
     private ArrayList<BluetoothDevice> mDevices;
     private int deviceCount;
