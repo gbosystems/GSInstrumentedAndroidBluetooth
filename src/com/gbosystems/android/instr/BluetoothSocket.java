@@ -52,19 +52,16 @@ public class BluetoothSocket {
             break;
         }
 
-        return;
     }
 	
     public void close() throws IOException{
         if (mThrowIOException) { throw new IOException(); }
         mConnected = false;
-        return;
     }
 
     public void connect() throws IOException{
         if (mThrowIOException) { throw new IOException(); }
         mConnected = true;
-        return;
     }
 
     public BluetoothDevice getRemoteDevice(){

@@ -63,7 +63,6 @@ public class BluetoothDevice {
             break;
         }
 
-        return;
     }
 	
     public String getName(){
